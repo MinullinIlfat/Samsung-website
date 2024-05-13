@@ -27,13 +27,11 @@
       box-sizing: border-box;
 
       .header-main, .header-extra {
-        ul {
+        .header-main-items {
           display: flex;
           align-items: center;
-          //margin: 0;
-          //padding: 0;
 
-          li {
+          .header-main-item {
             list-style: none;
             padding: 0 8px;
             cursor: pointer;
@@ -41,25 +39,77 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            position: relative;
 
 
             a {
-              font-family: Montserrat, sans-serif;
+              font-family: Montserrat-SemiBold, sans-serif;
               font-size: 14px;
             }
 
+            .header-main-container {
+              padding-top: 24px;
+              position: absolute;
+              top: 32px;
+              left: 0;
+              //transition: height .8s cubic-bezier(0.6,0,0.4,1);
+              //display: none;
+
+              .header-main-wrap {
+                background: white;
+                border-top: 2px solid gray;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                min-width: 224px;
+                display: flex;
+
+                .header-main-wrap-text {
+                  min-width: 224px;
+                  padding: 8px 0 32px;
+
+                  ul {
+
+                    li {
+                      color: black;
+                      list-style: none;
+                      padding: 8px 24px 9px;
+                      font-size: 14px;
+                      line-height: 19px;
+                      font-family: Montserrat-Regular, sans-serif;
+                      border-right: 1px solid gray;
+
+                      &:hover {
+                        font-family: Montserrat-Bold, sans-serif;;
+                      }
+                    }
+                  }
+                }
+
+                .header-main-wrap-new {
+                  padding: 8px 0 32px;
+
+                  .header-main-wrap-new-title {
+                    padding: 0 24px;
+                  }
+
+                  .header-main-wrap-items {
+
+                    div.header-main-wrap-item {
+
+                    }
+                  }
+                }
+              }
+            }
             &:hover {
               color: white;
               background: black;
               border-radius: 16px;
             }
-          }
-        }
-      }
 
-      .header-extra {
-        ul {
-          li {
+            &:hover .header-main-container {
+              display: flex;
+            }
           }
         }
       }

@@ -57,7 +57,7 @@
 
               .header-main-wrap {
                 background: white;
-                border-top: 2px solid gray;
+                border-top: 1px solid #ddd;
                 border-bottom-left-radius: 20px;
                 border-bottom-right-radius: 20px;
                 min-width: 224px;
@@ -72,14 +72,14 @@
                     li {
                       color: black;
                       list-style: none;
-                      padding: 8px 24px 9px;
+                      padding: 8px 0 9px 24px;
                       font-size: 14px;
                       line-height: 19px;
                       font-family: Montserrat-Regular, sans-serif;
-                      border-right: 1px solid gray;
+                      border-right: 1px solid #ddd;
 
                       &:hover {
-                        font-family: Montserrat-Bold, sans-serif;;
+                        font-family: Montserrat-Bold, sans-serif;
                       }
                     }
                   }
@@ -87,14 +87,45 @@
 
                 .header-main-wrap-new {
                   padding: 8px 0 32px;
+                  color: black;
 
                   .header-main-wrap-new-title {
+                    display: flex;
+                    align-items: center;
                     padding: 0 24px;
+                    height: 36px;
+                    font-family: Montserrat-Bold, sans-serif;
+                    font-size: 14px;
                   }
 
                   .header-main-wrap-items {
+                    display: grid;
+                    grid-template-columns: repeat(3, 156px);
+                    grid-template-rows: repeat(3, 140px);
+                    gap: 12px;
+                    margin: 0 14px;
 
                     div.header-main-wrap-item {
+                      padding: 8px 12px 12px;
+                      background: #f8f8f8;
+                      border-radius: 20px;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      flex-direction: column;
+                      .header-main-wrap-item-image {
+
+                        img {
+                          width: 84px;
+                          height: 68px;
+                        }
+                      }
+
+                      .header-main-wrap-item-description {
+                        margin-top: 6px;
+                        font-family: Montserrat-Regular,sans-serif;
+                        font-size: 12px;
+                      }
 
                     }
                   }

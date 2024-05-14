@@ -41,6 +41,46 @@
             justify-content: center;
             position: relative;
 
+            &:nth-child(2) {
+              ul {
+                li {
+                  border-right: 1px solid #ddd;
+                }
+              }
+            }
+            &:nth-child(3) {
+              .header-main-container {
+                left: -287px;
+                .header-main-wrap {
+                  display: grid !important;
+                  grid-template-columns: repeat(6, 224px) !important;
+                  grid-template-rows: auto auto;
+                  flex-direction: column;
+
+                  .header-main-wrap-text:nth-child(2) {
+                    grid-row: 2/3;
+                    grid-column: 1/2;
+                  }
+                  .header-main-wrap-text:nth-child(4) {
+                    grid-row: 2/3;
+                    grid-column: 2/3;
+                  }
+                  .header-main-wrap-text:nth-child(6) {
+                    grid-row: 2/3;
+                    grid-column: 3/4;
+                  }
+
+                  .header-main-wrap-text {
+                    ul {
+                      li {
+                        font-size: 12px;
+                        
+                      }
+                    }
+                  }
+                }
+              }
+            }
 
             a {
               font-family: Montserrat-SemiBold, sans-serif;
@@ -50,6 +90,7 @@
             .header-main-container {
               padding-top: 24px;
               position: absolute;
+              //overflow: hidden;
               top: 32px;
               left: 0;
               //transition: height .8s cubic-bezier(0.6,0,0.4,1);
@@ -76,7 +117,6 @@
                       font-size: 14px;
                       line-height: 19px;
                       font-family: Montserrat-Regular, sans-serif;
-                      border-right: 1px solid #ddd;
 
                       &:hover {
                         font-family: Montserrat-Bold, sans-serif;
@@ -90,12 +130,7 @@
                   color: black;
 
                   .header-main-wrap-new-title {
-                    display: flex;
-                    align-items: center;
-                    padding: 0 24px;
-                    height: 36px;
-                    font-family: Montserrat-Bold, sans-serif;
-                    font-size: 14px;
+
                   }
 
                   .header-main-wrap-items {

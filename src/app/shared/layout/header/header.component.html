@@ -14,9 +14,8 @@
             <div class="header-main-container">
               <div class="header-main-wrap">
                 <div class="header-main-wrap-text">
-                  <ul>
-                    <li>Galaxy Al</li>
-                    <li>BESPOKE Al</li>
+                  <ul *ngFor="let al of Al">
+                    <li>{{al.name}}</li>
                   </ul>
                 </div>
               </div>
@@ -27,23 +26,8 @@
             <div class="header-main-container">
               <div class="header-main-wrap">
                 <div class="header-main-wrap-text">
-                  <ul>
-                    <li>Мобильные устройства</li>
-                    <li>Galaxy Al</li>
-                    <li>Смартфоны</li>
-                    <li>Планшеты</li>
-                    <li>Ноутбуки Galaxy Book</li>
-                    <li>Galaxy Watch</li>
-                    <li>Galaxy Fit</li>
-                    <li>Наушники Galaxy Buds</li>
-                    <li>Аксессуары</li>
-                    <li>One Ul</li>
-                    <li>Приложения и сервисы</li>
-                    <li>Аллея звезд Galaxy</li>
-                    <li>Почему Galaxy</li>
-                    <li>Samsung Care+</li>
-                    <li>Всё для гейминга</li>
-                    <li>TryGalaxy</li>
+                  <ul *ngFor="let name of smartphonesName">
+                    <li>{{name.name}}</li>
                   </ul>
                 </div>
                 <div class="header-main-wrap-new">
@@ -51,76 +35,12 @@
                     Новое и интересное
                   </div>
                   <div class="header-main-wrap-items">
-                    <div class="header-main-wrap-item">
+                    <div class="header-main-wrap-item" *ngFor="let smartphoneImg of smartphonesImg">
                       <div class="header-main-wrap-item-image">
-                        <img src="../../../../assets/images/smartphones/GalaxyS24Ultra.png" alt="Galaxy S24 Ultra">
+                        <img src="{{smartphoneImg.img}}" alt="Galaxy S24 Ultra">
                       </div>
                       <div class="header-main-wrap-item-description">
-                        Galaxy S24 Ultra
-                      </div>
-                    </div>
-                    <div class="header-main-wrap-item">
-                      <div class="header-main-wrap-item-image">
-                        <img src="../../../../assets/images/smartphones/GalaxyS24S24+.png" alt="Galaxy S24 Ultra">
-                      </div>
-                      <div class="header-main-wrap-item-description">
-                        Galaxy S24 | S24 +
-                      </div>
-                    </div>
-                    <div class="header-main-wrap-item">
-                      <div class="header-main-wrap-item-image">
-                        <img src="../../../../assets/images/smartphones/GalaxyZFlip5.png" alt="Galaxy S24 Ultra">
-                      </div>
-                      <div class="header-main-wrap-item-description">
-                        Galaxy Z Flip5
-                      </div>
-                    </div>
-                    <div class="header-main-wrap-item">
-                      <div class="header-main-wrap-item-image">
-                        <img src="../../../../assets/images/smartphones/GalaxyZFold5.png" alt="Galaxy S24 Ultra">
-                      </div>
-                      <div class="header-main-wrap-item-description">
-                        Galaxy Z Fold5
-                      </div>
-                    </div>
-                    <div class="header-main-wrap-item">
-                      <div class="header-main-wrap-item-image">
-                        <img src="../../../../assets/images/smartphones/GalaxyTabS9.png" alt="Galaxy S24 Ultra">
-                      </div>
-                      <div class="header-main-wrap-item-description">
-                        Galaxy Tab S9
-                      </div>
-                    </div>
-                    <div class="header-main-wrap-item">
-                      <div class="header-main-wrap-item-image">
-                        <img src="../../../../assets/images/smartphones/Galaxy_Watch_6.png" alt="Galaxy S24 Ultra">
-                      </div>
-                      <div class="header-main-wrap-item-description">
-                        Galaxy Watch6
-                      </div>
-                    </div>
-                    <div class="header-main-wrap-item">
-                      <div class="header-main-wrap-item-image">
-                        <img src="../../../../assets/images/smartphones/GalaxyA55_5G.png" alt="Galaxy S24 Ultra">
-                      </div>
-                      <div class="header-main-wrap-item-description">
-                        Galaxy A55 5G
-                      </div>
-                    </div>
-                    <div class="header-main-wrap-item">
-                      <div class="header-main-wrap-item-image">
-                        <img src="../../../../assets/images/smartphones/GalaxyBuds2Pro.png" alt="Galaxy S24 Ultra">
-                      </div>
-                      <div class="header-main-wrap-item-description">
-                        Galaxy Buds2 Pro
-                      </div>
-                    </div>
-                    <div class="header-main-wrap-item">
-                      <div class="header-main-wrap-item-image">
-                        <img src="../../../../assets/images/smartphones/All-Smartphones.png" alt="Galaxy S24 Ultra">
-                      </div>
-                      <div class="header-main-wrap-item-description">
-                        Все смартфоны
+                        {{smartphoneImg.name}}
                       </div>
                     </div>
                   </div>
@@ -130,6 +50,18 @@
           </li>
           <li class="header-main-item">
             <a>ТВ и Аудио</a>
+            <div class="header-main-container">
+              <div class="header-main-wrap">
+                <div class="header-main-wrap-text" *ngFor="let title of TvAndAudio">
+                  <div class="header-main-wrap-new-title">
+                    {{title.title}}
+                  </div>
+                  <ul *ngFor="let item of title.items">
+                    <li>{{item.name}}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </li>
           <li class="header-main-item">
             <a>Бытовая техника</a>

@@ -65,18 +65,66 @@
           </li>
           <li class="header-main-item">
             <a>Бытовая техника</a>
+            <div class="header-main-container">
+              <div class="header-main-wrap">
+                <div class="header-main-wrap-text" *ngFor="let title of appliances">
+                  <div class="header-main-wrap-new-title">
+                    {{title.title}}
+                  </div>
+                  <ul *ngFor="let item of title.items">
+                    <li>{{item.name}}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </li>
           <li class="header-main-item">
             <a>Компьютеры</a>
+            <div class="header-main-container">
+              <div class="header-main-wrap">
+                <div class="header-main-wrap-text" *ngFor="let title of computers">
+                  <div class="header-main-wrap-new-title">
+                    {{title.title}}
+                  </div>
+                  <ul *ngFor="let item of title.items">
+                    <li>{{item.name}}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </li>
           <li class="header-main-item">
             <a>Дисплеи</a>
+            <div class="header-main-container">
+              <div class="header-main-wrap">
+                <div class="header-main-wrap-text" *ngFor="let title of displays">
+                  <div class="header-main-wrap-new-title">
+                    {{title.title}}
+                  </div>
+                  <ul *ngFor="let item of title.items">
+                    <li>{{item.name}}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </li>
           <li class="header-main-item">
             <a>Аксессуары</a>
           </li>
           <li class="header-main-item">
             <a>SmartThings</a>
+            <div class="header-main-container">
+              <div class="header-main-wrap">
+                <div class="header-main-wrap-text" *ngFor="let title of smartThings">
+                  <div class="header-main-wrap-new-title">
+                    {{title.title}}
+                  </div>
+                  <ul *ngFor="let item of title.items">
+                    <li>{{item.name}}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </li>
         </ul>
       </div>
@@ -84,6 +132,18 @@
         <ul class="header-main-items">
           <li class="header-main-item">
             <a>Поддержка</a>
+            <div class="header-main-container header-main-container-extra">
+              <div class="header-main-wrap">
+                <div class="header-main-wrap-text" *ngFor="let title of support">
+                  <div class="header-main-wrap-new-title">
+                    {{title.title}}
+                  </div>
+                  <ul *ngFor="let item of title.items">
+                    <li>{{item.name}}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </li>
           <li class="header-main-item">
             <a>Бизнес</a>

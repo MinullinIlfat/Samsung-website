@@ -15,6 +15,11 @@ export class HeaderComponent implements OnInit {
   smartphonesName = this.smartphonesService.smartphones;
   smartphonesImg = this.smartphonesService.smartphonesImages;
   TvAndAudio = this.smartphonesService.TvAndAudio;
+  appliances = this.smartphonesService.appliances;
+  computers = this.smartphonesService.computers;
+  displays = this.smartphonesService.displays;
+  smartThings = this.smartphonesService.smartThings;
+  support = this.smartphonesService.support;
 
   ngOnInit(): void {
 
